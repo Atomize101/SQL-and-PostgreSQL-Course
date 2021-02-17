@@ -57,3 +57,18 @@ FROM cities;
 // Practice
 
 SELECT name, price * units_sold as revenue from phones;
+
+// Using strings
+SELECT name || country FROM cities;
+// This gives a name, then a comma and a space
+SELECT name || ', ' || country FROM cities;
+SELECT name || ', ' || country AS location FROM cities;
+// Same thing but with CONCAT
+
+SELECT CONCAT(name, ', ', country) as location FROM cities;
+
+// LOWER() or UPPER()
+
+SELECT CONCAT(UPPER(name), ', ', UPPER(country)) as location FROM cities;
+
+SELECT UPPER(CONCAT(name, ', ', country)) as location FROM cities;
