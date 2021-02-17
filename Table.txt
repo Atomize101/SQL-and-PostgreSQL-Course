@@ -72,3 +72,12 @@ SELECT CONCAT(name, ', ', country) as location FROM cities;
 SELECT CONCAT(UPPER(name), ', ', UPPER(country)) as location FROM cities;
 
 SELECT UPPER(CONCAT(name, ', ', country)) as location FROM cities;
+
+// Filtering rows with WHERE
+// When looking at this query, think of FROM first, then WHERE, then finally name
+SELECT name, area FROM cities WHERE area > 4000;
+
+// Some comparison example
+SELECT name, area FROM cities WHERE area = 8223;
+SELECT name, area FROM cities WHERE area != 8223;
+SELECT name, area FROM cities WHERE area <> 8223;
