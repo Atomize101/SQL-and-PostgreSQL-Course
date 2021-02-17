@@ -43,3 +43,17 @@ VALUES
 
 -- WRITE YOUR SOLUTION BELOW THIS LINE!
     SELECT title, box_office from movies
+
+
+// Calculating columns
+SELECT name, population / area FROM cities;
+
+// Other math operators. +, -, *, /, ^ exponent, |/ Square Root,  @ absolute value, % remainder
+
+// This is how to rename a calculated column
+SELECT name, population / area as population_density
+FROM cities;
+
+// Practice
+
+SELECT name, price * units_sold as revenue from phones;
