@@ -1,0 +1,45 @@
+// Creating the table
+
+CREATE TABLE cities (
+	name VARCHAR(50),
+  country VARCHAR(50),
+  population INTEGER,
+  area INTEGER
+);
+
+// Inserting values into the table but values must line up to the table columns
+INSERT INTO cities (name, country, population, area)
+VALUES ('Tokyo', 'Japan', 38505000, 8223);
+
+// You can insert multiple rows like this below
+INSERT INTO cities (name, country, population, area)
+VALUES
+('Delhi', 'India', 28125000, 2240),
+('Shanghai', 'China', 22125000, 4015),
+('Sao Paulo', 'Brazil', 20935000, 3043);
+
+// This will retrieve all the records from the table cities
+SELECT * FROM cities;
+
+// This will retrieve just the name and country from cities
+SELECT name, country FROM cities
+
+// This will show the same values from the names columns
+SELECT name, name, name FROM cities
+
+// Practice
+
+-- You don't need to change these lines
+CREATE TABLE movies (
+    title VARCHAR(60),
+    box_office INTEGER
+);
+
+INSERT INTO movies (title, box_office)
+VALUES 
+    ('The Avengers', 1500000000),
+    ('Batman v Superman', 873000000);
+    
+
+-- WRITE YOUR SOLUTION BELOW THIS LINE!
+    SELECT title, box_office from movies
