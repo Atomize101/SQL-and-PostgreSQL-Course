@@ -16,6 +16,20 @@ Name varies, usually called something like 'xyz_id'
 Exactly equal to the primary key of the referenced row
 Will change if the relationship changes
 
+// Notes on Delete Option
+
+ON DELETE RESTRICT  =>  Throw and Error
+
+ON DELETE NO ACTION  => Throw an Error
+
+ON DELETE CASCADE  =>  Delete the photo too!
+
+ON DELETE SET NULL  =>  Set the 'user_id' of the photo to 'NULL'
+
+ON DELETE SET NULL  =>  Set the 'user_id' of the photo to 'NULL'
+
+ON DELTE SET DEFAULT  =>  Set the 'user_id' of the photo to a default value, if one is provided
+
 
 
 

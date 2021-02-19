@@ -45,3 +45,22 @@ SELECT * FROM photos WHERE user_id = 4;
 // Using a JOIN statement
 SELECT url, username FROM photos
 JOIN users ON users.id = photos.user_id;
+
+// Foreign key CONSTRAINT
+
+INSERT INTO photos (url, user_id)
+VALUES ('http://test.jpg', 9999);
+// Gives error, violates foreign key constraint
+
+// Null VALUE to get past the constraint
+
+INSERT INTO photos (url, user_id)
+VALUES ('http://test.jpg', NULL);
+
+// DELETE
+
+// Gives error DELETE restrict
+DELETE FROM users
+WHERE id = 1;
+
+// DELETE CASCADE
