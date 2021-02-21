@@ -156,3 +156,24 @@ VALUES
 SELECT contents, username
 FROM comments
 JOIN users ON users.id = comments.user_id;
+
+SELECT contents, username, photo_id
+FROM comments
+JOIN users ON users.id = comments.user_id;
+
+// For each comment, list the contents of the comment and URL of the photo the comment was added to
+
+SELECT contents, url
+from comments
+join photos ON  photos.id = comments.photo_id;
+
+// Show each photo url and the username of the poster
+
+SELECT url, username
+FROM photos
+join users ON users.id = photos.user_id;
+
+// Next addition will break the Query
+
+INSERT INTO photos (url, user_id)
+VALUES ('https://banner.jpg', NULL);  // This result is now not listed from previous query.
