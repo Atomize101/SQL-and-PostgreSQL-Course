@@ -2,20 +2,20 @@ CREATE TABLE users(
   id SERIAL PRIMARY KEY,
   username VARCHAR(50)
 );
- 
+
 CREATE TABLE photos (
   id SERIAL PRIMARY KEY,
   url VARCHAR(200),
   user_id INTEGER REFERENCES users(id) ON DELETE CASCADE
 );
- 
+
 CREATE TABLE comments (
   id SERIAL PRIMARY KEY,
   contents VARCHAR(240),
   user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
   photo_id INTEGER REFERENCES photos(id) ON DELETE CASCADE
 );
- 
+
 INSERT INTO users (username) 
 VALUES 
   ('Reyna.Marvin'),
@@ -23,7 +23,7 @@ VALUES
         ('Alfredo66'),
         ('Gerard_Mitchell42'),
         ('Frederique_Donnelly');
- 
+
 INSERT INTO photos (url, user_id)
 VALUES
   ('https://santina.net', 3),
@@ -46,7 +46,7 @@ VALUES
         ('http://buddy.info', 5),
         ('https://elinore.name', 2),
         ('http://sasha.com', 3);
- 
+
 INSERT INTO comments (contents, user_id, photo_id)
 VALUES
   ('Quo velit iusto ducimus quos a incidunt nesciunt facilis.', 2, 4),
@@ -150,30 +150,8 @@ VALUES
         ('Molestiae officia architecto eius nesciunt.', 5, 4),
         ('Minima dolorem reiciendis excepturi culpa sapiente eos deserunt ut.', 3, 3);
 
-// Advanced Query
-// For each comment, show the contents of the comment and the username of the user who wrote the comment
-
-SELECT contents, username
-FROM comments
-JOIN users ON users.id = comments.user_id;
-
-SELECT contents, username, photo_id
-FROM comments
-JOIN users ON users.id = comments.user_id;
-
-// For each comment, list the contents of the comment and URL of the photo the comment was added to
-
-SELECT contents, url
-from comments
-join photos ON  photos.id = comments.photo_id;
-
-// Show each photo url and the username of the poster
-
-SELECT url, username
-FROM photos
-join users ON users.id = photos.user_id;
-
-// Next addition will break the Query
-
 INSERT INTO photos (url, user_id)
-VALUES ('https://banner.jpg', NULL);  // This result is now not listed from previous query.
+VALUES ('https://banner.jpg', NULL);
+
+INSERT INTO users (username)
+VALUES ('Nicole');

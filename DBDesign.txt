@@ -47,3 +47,11 @@ We must give context if column names collide
 Tables can be renamed using the 'AS' keyword
 There are a few kind of joins
 
+// Four different kinds of joins refer to joins PDF cheat sheet in this project
+
+Inner Join
+Left Outer Join
+Right Outer join
+Full Join
+
+
