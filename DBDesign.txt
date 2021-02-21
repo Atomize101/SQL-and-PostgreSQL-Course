@@ -54,4 +54,14 @@ Left Outer Join
 Right Outer join
 Full Join
 
+// Notes on Aggregation and Grouping
+
+// Grouping
+Reduces many rows down to fewer rows
+Done by using the 'GROUP BY' keyword
+Visualing the result is key to use
+
+// Aggregates
+Reduces many values down to one
+Done by using the 'aggregate functions'
 

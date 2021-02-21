@@ -199,4 +199,12 @@ SELECT url, username
 FROM photos
 FULL JOIN users ON users.id = photos.user_id;
 
+// Grouping
+
+// Here the GROUP BY finds the set of all unique user-id's
+// Takes each row and assign it to a group based on its user_id
+SELECT user_id
+FROM comments
+GROUP BY user_id;
+
 
