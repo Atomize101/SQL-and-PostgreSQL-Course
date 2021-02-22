@@ -65,3 +65,17 @@ Visualing the result is key to use
 Reduces many values down to one
 Done by using the 'aggregate functions'
 
+// Various aggregate functions
+COUNT()
+SUM()
+AVG()
+MIN()
+MAX()
+
+// Notes on the following keywords
+
+FROM => specifies starting set of rows to work with
+JOIN => merges in data from additional tables
+WHERE => Filters the set of rows
+GROUP BY => Groups rows by a unique set of values
+HAVING => filters the set of groups

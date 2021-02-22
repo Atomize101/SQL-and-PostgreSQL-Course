@@ -207,4 +207,36 @@ SELECT user_id
 FROM comments
 GROUP BY user_id;
 
+// Aggregates
+SELECT MAX(id)
+FROM comments;
+
+SELECT SUM(id)
+FROM comments;
+
+// Aggregates and Grouping combined
+SELECT user_id, MAX(id)
+FROM comments
+GROUP BY user_id;
+
+// This can show how many comments a user has made 
+SELECT user_id, COUNT(id)
+FROM comments
+GROUP BY user_id;
+
+SELECT user_id, COUNT(id) AS num_comments_created
+FROM comments
+GROUP BY user_id;
+
+SELECT * FROM photos;
+SELECT COUNT(user_id) FROM photos; // Notice this does not count the NULL value in the db
+
+// This next query says to just count up all the rows and now the null value is included
+SELECT COUNT(*) FROM photos;
+// Typically when using COUNT, you will want to use * so you do not miss certain rows
+SELECT user_id, COUNT(*)
+FROM comments
+GROUP BY user_id;
+
+// Find the number of comments for each photo
 
